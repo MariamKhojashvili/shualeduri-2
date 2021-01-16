@@ -12,7 +12,7 @@
     
 @endif
 {{-- @if (count($joinedPosts)>0)
-<h2>Posts are got in relation with users by user_id value</h2>
+<h2>Posts are in relation with users by user_id value</h2>
 @foreach ($joinedPosts as $post2)
 <li class="list-group-item">
     <h3>{{$post2->title}}</h3>
