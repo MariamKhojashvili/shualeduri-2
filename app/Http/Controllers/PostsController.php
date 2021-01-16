@@ -20,7 +20,11 @@ class PostsController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
         $posts = $user->posts;
-        return view('post')->with(compact('posts'));
+        // $joinedPosts = Post::join('users', 'users.id','=','posts.user-id')
+        // ->select('posts.*', 'users.name as user_name', 'users.email as user_email')
+        // ->get();
+        // dd($joinedPosts->toArray());
+        return view('post')->with('posts', $posts, 'joinedPosts', $joinedPosts);
     }
 
     /**
